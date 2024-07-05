@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 import { Inter, Noto_Sans_KR } from 'next/font/google';
 import { Viewport } from 'next';
 import PlausibleProvider from 'next-plausible';
@@ -6,6 +6,7 @@ import { getSEOTags } from '@/libs/seo';
 import ClientLayout from '@/components/LayoutClient';
 import config from '@/config';
 import './globals.css';
+import Header from '@/components/Header';
 
 const font = Noto_Sans_KR({ subsets: ['latin'] });
 
@@ -30,7 +31,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       )}
       <body>
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
-        <ClientLayout>{children}</ClientLayout>
+        <ClientLayout>
+          <Suspense>
+            <Header />
+          </Suspense>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

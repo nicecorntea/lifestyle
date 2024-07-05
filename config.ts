@@ -3,7 +3,7 @@ import { ConfigProps } from './types/config';
 
 const config = {
   // REQUIRED
-  appName: '생활습관코칭협회',
+  appName: '국제생활습관코칭협회',
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     '맞춤형 프로그램, 전문가 조언, 커뮤니티 지원을 통해 건강하고 균형 잡힌 생활을 이루도록 도와주는 습관 코칭 플랫폼입니다.',

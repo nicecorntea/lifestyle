@@ -14,21 +14,26 @@ const links: {
   label: string;
 }[] = [
   {
-    href: '/#pricing',
-    label: '협회소개',
+    href: '/welcome',
+    label: '협회 소개',
   },
   {
-    href: '/#testimonials',
-    label: '공지사항',
+    href: '/blog',
+    label: '협회 소식',
   },
   {
-    href: '/#faq',
-    label: '협회소식',
+    href: '/companies',
+    label: '회원사',
   },
 ];
 
-const cta: JSX.Element = <ButtonSignin extraStyle='btn-primary' />;
+const cta = (
+  <>
+    <button className='mr-3 btn-primary btn'>회원가입</button>
 
+    <ButtonSignin extraStyle='btn-primary' />
+  </>
+);
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
 const Header = () => {
@@ -57,7 +62,7 @@ const Header = () => {
               src={logo}
               alt={`${config.appName} logo`}
               className='w-8'
-              placeholder='blur'
+              // placeholder='blur'
               priority={true}
               width={32}
               height={32}
@@ -124,7 +129,7 @@ const Header = () => {
                 src={logo}
                 alt={`${config.appName} logo`}
                 className='w-8'
-                placeholder='blur'
+                // placeholder='blur'
                 priority={true}
                 width={32}
                 height={32}
