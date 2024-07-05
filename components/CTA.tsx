@@ -14,7 +14,7 @@ const CTA = () => {
       <div className='relative p-8 text-center hero-content text-neutral-content'>
         <div className='flex flex-col items-center max-w-xl p-8 md:p-0'>
           <h2 className='mb-4 text-2xl font-bold tracking-tight md:text-5xl md:mb-12'>
-            국제생활습관코칭협회와
+            국제생활습관코칭협회
           </h2>
           <p className='mb-12 text-lg opacity-80 md:mb-16'>함께 나아가요!</p>
 

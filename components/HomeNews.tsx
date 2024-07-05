@@ -30,7 +30,7 @@ function HomeNews() {
               src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
               alt='Shoes'
             /> */}
-            <div className='w-full h-52 skeleton'></div>
+            <div className='w-full h-72 skeleton'></div>
           </figure>
           <div className='card-body'>
             <h2 className='card-title'>{newsItem.title.slice(0, 20)}</h2>

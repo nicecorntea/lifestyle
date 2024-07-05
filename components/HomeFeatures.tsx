@@ -125,7 +125,7 @@ const Item = ({
             isOpen ? 'text-primary font-semibold' : ''
           }`}
         >
-          <h3 className='inline'>{title}</h3>
+          <h3 className='inline sm:text-2xl'>{title}</h3>
         </span>
       </button>
 
@@ -138,7 +138,7 @@ const Item = ({
             : { maxHeight: 0, opacity: 0 }
         }
       >
-        <div className='pb-5 leading-relaxed'>{description}</div>
+        <div className='pb-5 leading-relaxed sm:text-xl'>{description}</div>
       </div>
     </li>
   );
@@ -150,7 +150,7 @@ const Media = ({ feature }: { feature: Feature }) => {
   const { type, path, format, alt } = feature;
   const style = 'rounded-2xl aspect-square w-full sm:w-[26rem]';
   const size = {
-    width: 600,
+    width: 800,
     height: 500,
   };
 
@@ -171,13 +171,15 @@ const Media = ({ feature }: { feature: Feature }) => {
     );
   } else if (type === 'image') {
     return (
-      <Image
-        src={path}
-        alt={alt}
-        className={`${style} object-cover object-center`}
-        width={size.width}
-        height={size.height}
-      />
+      <div className='relative w-full h-96'>
+        <Image
+          src={path}
+          alt={alt}
+          fill
+          // className={`${style} object-cover object-center`}
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
     );
   } else {
     return <div className={`${style} !border-none`}></div>;
@@ -202,7 +204,7 @@ const HomeFeatures = () => {
           </span>
         </h2>
         <div className='flex flex-col gap-12 md:flex-row md:gap-24'>
-          <div className='grid items-stretch grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20'>
+          <div className='grid items-stretch grid-cols-1 gap-8 lg:grid-cols-2'>
             <ul className='w-full'>
               {features.map((feature, i) => (
                 <Item
