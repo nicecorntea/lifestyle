@@ -2,10 +2,13 @@ import Image from 'next/image';
 
 function Page() {
   return (
-    <div className='w-full space-y-10'>
-      <h1 className='text-4xl text-center'>협회장인사말</h1>
+    <div className='flex flex-col w-full h-full space-y-10'>
+      <h1 className='mb-12 text-2xl font-extrabold tracking-tight text-center sm:text-3xl md:text-6xl md:mb-24'>
+        협회장인사말
+      </h1>
+      {/* <h1 className='text-4xl text-center'>협회장인사말</h1> */}
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 auto-rows-fr'>
-        <div className='relative bg-gray-300 bg-opacity-70'>
+        <div className='relative bg-gray-300 sm:h-[800px] bg-opacity-70'>
           <Image
             src={'/assets/figures/person1.jpeg'}
             alt='person'
@@ -13,7 +16,7 @@ function Page() {
             style={{ objectFit: 'contain' }}
           />
         </div>
-        <div className='font-semibold leading-relaxed text-base-content/80'>
+        <div className='font-semibold sm:text-xl text-base-content/80'>
           안녕하십니까, 국제생활습관협회 회장으로서 여러분께 인사드립니다.
           생활습관의학을 기반으로 한 생활습관 코칭은 시민들이 올바른 습관을
           형성하도록 깊이 있는 학습을 제공합니다. 이를 통해 우리는 건강한 육체와

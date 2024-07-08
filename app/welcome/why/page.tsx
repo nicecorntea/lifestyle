@@ -1,8 +1,10 @@
 function Page() {
   return (
     <div className='w-full space-y-10'>
-      <h1 className='text-4xl text-center'>협회 설립 취지 및 목적</h1>
-      <div className='font-semibold leading-relaxed text-base-content/80'>
+      <h1 className='mb-12 text-2xl font-extrabold tracking-tight text-center sm:text-3xl md:text-6xl md:mb-24'>
+        협회 설립 취지 및 목적
+      </h1>
+      <div className='font-semibold sm:text-xl text-base-content/80'>
         국제생활습관협회는 세계 시민들의 건강과 웰빙 증진에 적극적으로
         공헌합니다. 생활습관의학을 기반으로 한 생활습관 코칭 분야의 대표단체로서
         건강한 생활습관의 중요성을 알리고 이를 통한 질병 예방 및 관리의 중요성을

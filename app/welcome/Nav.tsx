@@ -31,13 +31,13 @@ function Nav() {
   return (
     <div
       role='tablist'
-      className='w-full max-w-2xl pt-4 mx-auto tabs tabs-bordered'
+      className='w-full pt-4 mx-auto max-w-7xl tabs tabs-lg tabs-bordered'
     >
       {links.map((link, index) => (
         <Link
           href={link.href}
           role='tab'
-          className={`tab ${
+          className={`tab  ${
             path == link.href ? 'tab-active text-primary-content font-bold' : ''
           }`}
           key={index}

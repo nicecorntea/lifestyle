@@ -207,6 +207,8 @@ const HomeFeatures = () => {
         </h2>
         <div className='flex flex-col gap-12 md:flex-row md:gap-24'>
           <div className='grid items-stretch grid-cols-1 gap-8 lg:grid-cols-2'>
+            <Media feature={features[featureSelected]} key={featureSelected} />
+
             <ul className='w-full'>
               {features.map((feature, i) => (
                 <Item
@@ -218,7 +220,6 @@ const HomeFeatures = () => {
                 />
               ))}
             </ul>
-            <Media feature={features[featureSelected]} key={featureSelected} />
           </div>
         </div>
       </div>
