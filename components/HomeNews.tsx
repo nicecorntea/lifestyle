@@ -5,7 +5,7 @@ function HomeNews() {
     {
       title: '국제생활습관협회, 첫 발을 내딛다',
       description:
-        '오늘 국제생활습관협회가 공식 창단식을 갖고, 전 세계인의 건강하고 균형 잡힌 생활습관을 촉진하기 위한 첫 발걸음을 내디뎠습니다. 이번 창단식에는 각국의 건강 전문가들이 참석하여 협회의 비전과 목표를 공유했습니다.',
+        '다가오는 7월 28일 국제생활습관협회가 비전선포식을 갖고, 전 세계인의 건강하고 균형 잡힌 생활습관을 촉진하기 위한 첫 발걸음을 내디뎠습니다. 이번 창단식에는 각국의 건강 전문가들이 참석하여 협회의 비전과 목표를 공유했습니다.',
     },
     {
       title: '국제생활습관협회, 첫 기수 회원 모집 시작',
@@ -20,27 +20,32 @@ function HomeNews() {
   ];
   return (
     <section
-      className='grid gap-5 px-5 py-24 mx-auto md:grid-cols-3 md:py-32 max-w-7xl bg-base-100'
+      className='px-5 py-24 mx-auto md:py-32 max-w-7xl bg-base-100'
       id='news'
     >
-      {news.map((newsItem, i) => (
-        <div className='h-full shadow-xl card bg-base-100' key={i}>
-          <figure>
-            {/* <img
+      <h2 className='mb-10 text-2xl font-bold text-center sm:text-3xl md:text-6xl'>
+        뉴스
+      </h2>
+      <div className='grid gap-5 md:grid-cols-3 max-w-7xl'>
+        {news.map((newsItem, i) => (
+          <div className='h-full shadow-xl card bg-base-100' key={i}>
+            <figure>
+              {/* <img
               src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
               alt='Shoes'
             /> */}
-            <div className='w-full h-72 skeleton'></div>
-          </figure>
-          <div className='card-body'>
-            <h2 className='card-title'>{newsItem.title.slice(0, 20)}</h2>
-            <p>{newsItem.description.slice(0, 50)}</p>
-            <div className='justify-end card-actions'>
-              <button className='btn btn-primary'>보러가기</button>
+              <div className='w-full h-72 skeleton'></div>
+            </figure>
+            <div className='card-body'>
+              <h2 className='card-title'>{newsItem.title.slice(0, 20)}</h2>
+              <p>{newsItem.description.slice(0, 50)}</p>
+              <div className='justify-end card-actions'>
+                <button className='btn btn-primary'>보러가기</button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }

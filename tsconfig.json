@@ -9,7 +9,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": true,
@@ -24,6 +24,7 @@
     ]
   },
   "include": [
+    "video.d.ts",
     "video.d.ts",
     "video.d.ts",
     "next-env.d.ts",

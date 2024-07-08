@@ -8,7 +8,7 @@ import config from '@/config';
 import './globals.css';
 import Header from '@/components/Header';
 
-const font = Noto_Sans_KR({ subsets: ['latin'] });
+const font = Inter({ subsets: ['latin'] });
 
 export const viewport: Viewport = {
   // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers

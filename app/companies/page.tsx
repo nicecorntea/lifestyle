@@ -1,7 +1,7 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 
 function Page() {
-  return <div>company page</div>;
+  return <div>협회사 리스트 표</div>;
 }
 
 export default Page;

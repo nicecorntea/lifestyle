@@ -43,6 +43,7 @@ const features = [
         />
       </svg>
     ),
+    alt: 'image',
   },
   {
     title: '전문가 조언',
@@ -66,6 +67,7 @@ const features = [
         />
       </svg>
     ),
+    alt: 'image',
   },
   {
     title: '커뮤니티 지원',
@@ -197,7 +199,7 @@ const HomeFeatures = () => {
       id='features'
     >
       <div className='px-8'>
-        <h2 className='mb-12 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-6xl md:mb-24'>
+        <h2 className='mb-12 text-2xl font-extrabold tracking-tight text-center sm:text-3xl md:text-6xl md:mb-24'>
           건강하고 균형 잡힌 생활을 위한
           <span className='bg-primary text-primary-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap'>
             최고의 국제생활습관협회
