@@ -8,20 +8,20 @@ const links: {
   label: string;
 }[] = [
   {
-    href: '/welcome/introduce',
-    label: '인사말',
+    href: '/edu/1',
+    label: '코칭상담',
   },
   {
-    href: '/welcome/why',
-    label: '생활습관코칭의 전망',
+    href: '/edu/2',
+    label: '교육 & 서비스',
   },
   {
-    href: '/welcome/org',
-    label: '조직도',
+    href: '/edu/3',
+    label: '학술 & 도서출판',
   },
   {
-    href: '/welcome/business',
-    label: '주요사업',
+    href: '/edu/4',
+    label: '사회사업 & 장학',
   },
 ];
 function Nav() {

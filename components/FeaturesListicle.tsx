@@ -392,14 +392,12 @@ const features: {
   svg: JSX.Element;
 }[] = [
   {
-    name: '기관업무협약',
+    name: '코칭 상담',
     description: (
       <>
         <ul className='space-y-1'>
           {[
-            '관련 분야 전문기관과 협력 관계 구축',
-            '정보 및 자원 공유를 위한 MOU 체결',
-            '공동 프로젝트 및 연구 수행',
+            '좋은 생활습관이 필요한 사람들에게 코칭을 통한 맞춤형 생활습관교정 프로토콜 제공',
           ].map((item) => (
             <li key={item} className='flex items-center gap-3'>
               <svg
@@ -439,14 +437,12 @@ const features: {
     ),
   },
   {
-    name: '연구개발',
+    name: '학술 & 도서출판',
     description: (
       <>
         <ul className='space-y-2'>
           {[
-            '생활습관 관련 최신 트렌드 연구',
-            '혁신적인 생활습관 개선 방법론 개발',
-            '연구 결과의 실용화 및 보급',
+            '생활습관분야에 대한 다양하고 깊은 학술연구를 하며 자료를 집필하여 보급',
           ].map((item) => (
             <li key={item} className='flex items-center gap-3'>
               <svg
@@ -486,14 +482,12 @@ const features: {
     ),
   },
   {
-    name: '대회협력',
+    name: '교육 & 서비스',
     description: (
       <>
         <ul className='space-y-2'>
           {[
-            '국내외 생활습관 관련 대회 주최 및 후원',
-            '참가자 모집 및 지원',
-            '대회 운영 및 심사 지원',
+            '생활습관코칭전문가를 양성하고 정부, 지자체, 관공서 기업에 생활습관교육 서비스 제공 ',
           ].map((item) => (
             <li key={item} className='flex items-center gap-3'>
               <svg
@@ -533,61 +527,12 @@ const features: {
     ),
   },
   {
-    name: '사회공헌',
+    name: '사회사업 & 장학',
     description: (
       <>
         <ul className='space-y-2'>
           {[
-            '건강한 생활습관 보급을 위한 캠페인',
-            '취약계층 대상 생활습관 개선 프로그램',
-            '지역사회와 연계한 건강증진 활동',
-          ].map((item) => (
-            <li key={item} className='flex items-center gap-3'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 20 20'
-                fill='currentColor'
-                className='w-[18px] h-[18px] inline shrink-0 opacity-80'
-              >
-                <path
-                  fillRule='evenodd'
-                  d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
-                  clipRule='evenodd'
-                />
-              </svg>
-
-              {item}
-            </li>
-          ))}
-        </ul>
-      </>
-    ),
-    svg: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        fill='none'
-        viewBox='0 0 24 24'
-        strokeWidth={1.5}
-        stroke='currentColor'
-        className='w-8 h-8'
-      >
-        <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          d='M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z'
-        />
-      </svg>
-    ),
-  },
-  {
-    name: '전문가양성',
-    description: (
-      <>
-        <ul className='space-y-2'>
-          {[
-            '생활습관 개선 전문가 교육 프로그램 운영',
-            '자격증 발급 및 관리',
-            '지속적인 보수교육 제공',
+            '청소년을 포함한 지역사회에 필요한 자원 및 인재양성을 위한 재원을 제공',
           ].map((item) => (
             <li key={item} className='flex items-center gap-3'>
               <svg

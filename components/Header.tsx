@@ -18,8 +18,8 @@ const links: {
     label: '협회 소개',
   },
   {
-    href: '/blog',
-    label: '협회 소식',
+    href: '/edu',
+    label: '코칭 교육',
   },
   {
     href: '/companies',
