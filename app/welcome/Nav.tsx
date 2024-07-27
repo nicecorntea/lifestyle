@@ -31,7 +31,7 @@ function Nav() {
   return (
     <div
       role='tablist'
-      className='w-full pt-4 mx-auto max-w-7xl tabs tabs-lg tabs-bordered'
+      className='w-full pt-4 mx-auto max-w-7xl tabs tabs-sm md:tabs-lg tabs-bordered'
     >
       {links.map((link, index) => (
         <Link
