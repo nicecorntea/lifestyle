@@ -19,7 +19,7 @@ const links: {
   },
   {
     href: '/edu',
-    label: '코칭 교육',
+    label: '사업분야',
   },
   {
     href: '/companies',

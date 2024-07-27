@@ -1,42 +1,86 @@
 import React from 'react';
+import Head from 'next/head';
 
-function Page() {
+const organizationStructure = [
+  {
+    title: '협회장',
+    name: '이창현',
+  },
+  {
+    title: '고문단',
+    name: '김경태 임은진 최중언 함석찬 ',
+  },
+  {
+    title: '부협회장',
+    name: '이영좌 김선희',
+  },
+  {
+    title: '자문단',
+    name: '김달영 김배년 김종한 김지혜 서혜정 소현아 송인욱 안관홍 안영준 정혜민 채덕자 채수봉 허순애',
+  },
+  {
+    title: '위원회',
+    committees: [
+      { name: '사무국트파트장', head: '' },
+      { name: 'IT 파트', head: '허만권' },
+      { name: '수면 & 중독파트', head: '이정귀 정혜민 최숙정' },
+      { name: '영양&음용 파트', head: '김윤희 윤지현 김희순' },
+      { name: '마음, 관계 파트', head: '김세희 서혜정 유경란' },
+      { name: '성공&취업파트', head: '김경태 허순애 채덕자' },
+      { name: '대외홍보파트', head: '변성원 안영준' },
+    ],
+  },
+];
+
+const OrganizationCard = ({
+  title,
+  name,
+  committees,
+}: {
+  title: string;
+  name: string;
+  committees: any;
+}) => (
+  <div className='p-6 mb-4 bg-white rounded-lg shadow-md'>
+    <h3 className='mb-2 text-xl font-bold'>{title}</h3>
+    {name && <p className='text-gray-700'>{name}</p>}
+    {committees && (
+      <ul className='pl-5 list-disc'>
+        {committees.map((committee: any, index: number) => (
+          <li key={index} className='text-gray-700'>
+            {committee.name}: {committee.head}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+);
+
+const OrganizationStructurePage = () => {
   return (
-    <div className='w-full space-y-10'>
-      <h1 className='mb-12 text-2xl font-extrabold tracking-tight text-center sm:text-4xl md:mb-24'>
-        조직도
-      </h1>
-      <div className='grid max-w-5xl grid-cols-3 gap-4 mx-auto'>
-        <div>
-          <div>
-            차의과학대학교 통합의학대학원겸임교수 개인자격 국제표준 ISO 17024
-            전문위원 ISO 17024 color analyst & personality Development
-            인증원원장 서울 장신대 자연치유선교대학원 외래교수 서울대학교
-            그린바이오 과학기술연구원 자문위원 전) 연세대학교 미래융합연구원
-            연구원   국제생활습관코칭협회 부협회장
-          </div>
-        </div>
-        <div>
-          <div>
-            하버드기반 생활습관의학 미국보드 취득 유튜브 ‘생습TV’ 채널운영
-            나의생활습관연구소 공동대표 ㈜ 데일리바이오 대표이사 차의과학대학교
-            일반대학과 의학과 통합의학전공 박사과정 차의과학대학교
-            통합의학대학원 통합의학석사 성균관대학교 경영대학원 MBA
-            국제생활습관코칭협회 협회장
-          </div>
-        </div>
-        <div>
-          <div>
-            아로마젠타 아카데미 대표 신용보증재단 – 소상공인지원센터 창업 멘토
-            서울신학대학교 평생교육원 교수 저서 : “테라피스트를 위한
-            아로마테라피“ 공저 차의과대학원 통합의학 석사 유튜브
-            “아로마테라피스트 김선희＂채널 운영 국제생활습관코칭협회 부협회장
-            하버드기반 생활습관의학 미국보드 취득
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+    <>
+      <Head>
+        <title>조직도 | 국제생활습관코칭협회</title>
+        <meta name='description' content='국제생활습관코칭협회의 조직 구조' />
+      </Head>
+      <div className='min-h-screen bg-gray-100'>
+        <main className='container px-4 py-12 mx-auto'>
+          <h1 className='mb-12 text-4xl font-bold text-center'>조직도</h1>
 
-export default Page;
+          <div className='max-w-3xl mx-auto'>
+            {organizationStructure.map((item, index) => (
+              <OrganizationCard
+                key={index}
+                committees={item.committees}
+                name={item.name}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+
+export default OrganizationStructurePage;
