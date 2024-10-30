@@ -18,6 +18,13 @@ export const getSEOTags = ({
   extraTags?: Record<string, any>;
 } = {}) => {
   return {
+    verification: {
+      google: "Lp_34mPsjtbN4w7fFD15sEs-Lo72TPADN3TlIQlFggg",
+      other: {
+        "naver-site-verification": "1787dd8a1e83fa4ba599bb7a0bf34718636fbe6b",
+      },
+    },
+
     // up to 50 characters (what does your app do for the user?) > your main should be here
     title: title || config.appName,
     // up to 160 characters (how does your app help the user?)
@@ -45,7 +52,7 @@ export const getSEOTags = ({
       //     height: 660,
       //   },
       // ],
-      locale: "en_US",
+      locale: "ko_KR",
       type: "website",
     },
 
@@ -55,7 +62,7 @@ export const getSEOTags = ({
       // If you add an twitter-image.(jpg|jpeg|png|gif) image to the /app folder, you don't need the code below
       // images: [openGraph?.image || defaults.og.image],
       card: "summary_large_image",
-      creator: "@marc_louvion",
+      creator: "lifecoaching",
     },
 
     // If a canonical URL is given, we add it. The metadataBase will turn the relative URL into a fully qualified URL
